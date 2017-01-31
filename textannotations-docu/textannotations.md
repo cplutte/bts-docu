@@ -243,6 +243,23 @@ Die farbliche Hinterlegung der Annotationen lässt sich je nach Typ und Subtyp e
 
 ![Annotation Styling](file:///C:/IT/BTS/Erweiterung_Camilla/img/text_annotation_settings_color.bmp)
 
+Zum Einstellen einer neuen Farbe, auf das Farbfeld klicken. Dann öffnet sich ein Farbdialog.
+
+![Farbe einstellen](file:///C:/IT/BTS/Erweiterung_Camilla/img/define_color.png)
+
+Zum Definieren einer neuen Farbe basierend auf RGB-Werten, auf `Farbe definieren` klicken. Dann erweitert sich der Dialog.
+
+![Farbe in RGB einstellen](file:///C:/IT/BTS/Erweiterung_Camilla/img/add_color.png)
+
+Hier kann die neue Farbe auf der Basis ihrer RGB-Werte eingestellt werden. Anschließend `Farbe hinzufügen` klicken. Dannk kann mit `OK` die Farbauswahl bestätigt werden.
+
+Die Farben werden mit ihren RGB-Werten eingestellt.
+
+Für FDFF37 (Lexical Group): R: 253, G: 255, B:	55
+
+Für 00A51C (ConceptualGroup, ConceptualGroup2, ConceptualGroup3): R: 0, G: 165, B: 28
+
+Für 0630FF (TextualGroup): R: 6, G: 48, B: 255
 
 ### Einstellungen der Formulare ###
 
@@ -286,5 +303,27 @@ In die Datei: `workspace\.metadata\.plugins\org.eclipse.core.runtime\.settings\o
 
 `pref_corpus_activate_main_corpus_selection=true`
 
+
+## Installation auf dem Mac ##
+
+### Installation der Datenbank ###
+
+1. Download der Datenbank von couchdb.org; Download CouchDB 1.6.1 für Mac
+2. Entpacken der heruntergeladenen Datein
+3. Installation der Datenbank, d.h. die Datei Apache CouchDB in den Programme-Ordner ziehen
+4. Datenbank starten
+5. Datenbank vorbereiten: Datenbank im Browser öffnen, 127.0.0.1:5984/_utils; Unten rechts auf Administrator hinzufügen klicken; Wichtig: Unbedingt den Benutzernamen mit demselben Passwort als Datenbankadministrator hinzufügen, der auch für das BTS zur Installation verwendet wird!
+
+### Installation des BTS ###
+
+1. Dateien entpacken
+2. Terminal öffnen und Rechte hinzufügen; im Terminal in den Ordner gehen, in dem die entpackten BTS-Dateien liegen und folgenden Command ausführenf: `chmod -R 777 BTS.app
+3. BTS durch Doppelklick starten
+4. Bei der Installation auf den Port der lokalen Datenbank einstellen, hier muss der Port der im ersten Schritt lokal intallierten CouchDB-Datenbank angegeben werden, i.d.R. ist das 5984
+5. Weitere Installationsschritte entsprechend der normalen BTS-Installation
+
+
+### Starten des BTS ###
+Zum Starten des BTS immer erst manuell die CouchDB-Datenbank über den Shortcut im Programme-Ordner starten.
 
 

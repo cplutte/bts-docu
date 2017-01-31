@@ -294,9 +294,18 @@ JQuery Componenten und Bibliotheken
 - Lolight für tokenizer und syntax highliting; verwedet für egytext.jquery.js
 - Egytext.jquery.js – eigene bibliothek für die Präsentation von egytext
 
+#### Egytext.jquery.js ####
+
+Die Javascript-Bibliothek Egytext.jquery.js dient der Serialisierung von `BTSText`-Objekten bzw. der Serialisierung von deren `TextContent`-Objekten. HTML-Elemente der Klasse `egytext` können als Platzhalter für den nach HTML serialisierten Textinhalt dienen. Das Attribut `data` kann entweder ein JSON `TextContent`-Objekt enthalten oder eine URL auf ein JSON `BTSText`-Objekt. Das Attribut `annotations` kann eine URL auf Annotationen zum Text enthalten, die für die Serialisierung berücksichtigt werden sollen. 
+
+Die Bibliothek basiert auf Teilen von lolight.js, einem Parser in Javascript zum Highliting von Code.
+
+Die Bibliothek ist bisher nur sehr rudimentär implementiert.
+
 ### CSS ###
 - Popover
-- … eigentlich fast alles CSS elemnete
+- derzeit fast alles CSS elemnete
+- bei Bedarf ergänzen
 
 
 ## Datenfluss ##
@@ -308,6 +317,12 @@ Hier wird ein Beispiel für den Datenfluss von der Datenbank ins Frontend gegebe
 Für die Konfiguration wird derzeit hauptsächlich der `StartupController` aus dem `org.bbaw.tla.web`-Bundle verwendet.
 
 Später sollten die Werte der Konfiguration aus einer einfachen Textdatei in den `StartupControler` geladen werden.
+
+### Java Version des Virgo Server ###
+
+Eclipse Virgo ist derzeit nur in der Java Version 6 erhältlich. Die BTS Bundles erwarten jedoch Java 7. Fürgt man Java 7 in der Konfiguration von Virgo hinzu und stellt eine Java 7 Laufzeitumgebung zur Verfügung, laufen die Bundles trotzdem.
+
+Im Virog-HOME-Verzeichnis muss die Datei `configuration/java6-server.profile` modifiziert werden. Hierzu dem Property `org.osgi.framework.executionenvironment` den Eintrag `JavaSE-1.7` hinzufügen.
 
 ## Installation ##
 
